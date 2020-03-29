@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll"
+            android:id="@+id/headLayout"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/image"
+                android:background="@mipmap/rb"
+                />
+        </RelativeLayout>
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tab"
+            android:background="@color/colorWhite"
+            app:tabSelectedTextColor="@color/colorPrimary"
+            />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/refreshLayout"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recyc"
+            />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>
